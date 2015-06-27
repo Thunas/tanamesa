@@ -8,10 +8,15 @@ class LoginDAO{
 		$this->con = ConnectionFactory::getConnection();
 	}
 	
-	public function validaLogin ($nome,$senha){
-		$query = "select nomeUsuario from usuario where nomeUsuario='".$nome."' and senhaUsuario='".$senha."'";
+	public function validaLogin ($login,$senha){
+		$query = "select idUsuario, nomeUsuario from usuario where loginUsuario='".$login."' and senhaUsuario='".$senha."'";
 		$result = $this->con->query($query);
-		$saida = $result->fetch_assoc();
-		return $saida['nomeUsuario'];
+		if ($result->num_rows!=0){
+			
+			$saida = $result->fetch_assoc();
+			$array = array("nomeUsuario"=> $saida['nomeUsuario'], "idUsuario" => $saida["idUsuario"]); 
+			return $array;
+		}
+		return null;
 	}
 }

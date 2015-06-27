@@ -37,7 +37,7 @@ class Usuario {
 	public function setIdUsuario ($int){
 		$this->idUsuario = $int;
 	}
-	public function setNome ($string){
+	public function setNomeUsuario ($string){
 		$this->nomeUsuario = $string;
 	}
 	public function setSobreNomeUsuario ($string){
