@@ -3,14 +3,16 @@
 	<head>
 	</head>
 	<body>
-	<form name="formulario" action="Login/login.php">
-		<input type="text" name="Login">
-		<input type="password" name="Senha">
-		<input type="submit">
-	</form>
-	<!-- BEGIN: CampoNome -->
-		<h1>{nome}</h1>
-	<!-- END: CampoNome -->
+	
+		<form name="Login" action="Controller/ServletLogin.php">
+			<input type="text" name="Nome">
+			<input type="password" name="Senha">
+			<input type="submit" value="Entrar">
+		</form>
+		<form name="Buscar" action="Controller/ServletBuscar.php">
+			<input type="text" name="CampoBusca">
+			<input type="submit" value="Busca">
+		</form>
 	</body>
 </html>
 <!-- END: main -->
