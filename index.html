@@ -1,0 +1,56 @@
+<!-- BEGIN: main -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaNaMesa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+        
+<body class="body">
+	<img src="img/Logo_Pronta.png" width="286" height="140" class="img-rounded" >
+    
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="btn-group">
+  <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i>{nomeUsuario}</a>
+  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#"><i class="icon-pencil"></i> Editar informacoes</a></li>
+    <li><a href="Servlet/ServletSair.php"><i class="icon-ban-circle"></i>Sair</a></li>
+  </ul>
+</div>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Receitas</a></li>
+      <li><a href="#">Contato<i class="icon-envelope"></i></a></li>
+    </ul>
+  </div>
+</div>
+
+	<!-- BEGIN: logar -->
+    <form name="Login" action="Servlet/ServletLogin.php" method="POST">
+    	<form class="form-inline">
+    	<form name="Login" action="Servlet/ServletLogin.php" method="POST">
+ 		<input type="text" class="input-medium" placeholder="Login" name="Login">
+  		<input type="password" class="input-medium" placeholder="Senha">
+  		</label>
+  		<button type="submit" class="btn">Entrar</button>
+	</form>
+  		<!-- BEGIN: busca -->
+          <form class="form-search">
+  			<input type="text" class="input-medium search-query" placeholder="Digite sua busca" action="Controller/Buscar.php" method="GET">
+  			<button type="submit" class="btn">Buscar</button>
+		</form>
+		<!-- END: busca -->        
+        <div class="corpo">
+            <div>
+            </div>
+        </div>
+	</body>
+</html>
+<!-- END: main -->
