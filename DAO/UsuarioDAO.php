@@ -2,7 +2,7 @@
 
 require_once ("../ConnectionFactory/ConnectionFactory.php");
 
-class LoginDAO{
+class UsuarioDAO{
 	private $con = null;
 	public function __construct(){
 		$this->con = ConnectionFactory::getConnection();

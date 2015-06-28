@@ -1,14 +1,14 @@
 <html>
 	<head>
 			<?php
-				require_once ("../DAO/LoginDAO.php");
+				require_once ("../DAO/UsuarioDAO.php");
 				require_once ("../Model/Usuario.class.php");
 				$login = $_POST["Login"];
 				$senha = $_POST["Senha"];
 				session_start();
 				session_destroy();
 				session_start();
-				$loginDAO = new LoginDAO();
+				$loginDAO = new UsuarioDAO();
 				$array = $loginDAO->validaLogin($login, $senha);
 				if ($array!=null){
 					$usuario = new Usuario();

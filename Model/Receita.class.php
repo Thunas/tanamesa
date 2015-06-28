@@ -21,7 +21,7 @@ class Receita{
 		return $this->nomeReceita;
 	}
 	public function getDescricaoReceita (){
-		return $this->idReceita;
+		return $this->descricaoReceita;
 	}
 	public function getDificuldadeReceita (){
 		return $this->dificuldadeReceita;
