@@ -10,7 +10,7 @@
 				if (contPasso != maxPasso){
 					document.getElementById (contPasso+"Passo").style.display = "none";
 					contPasso++;
-					document.getElementById (contPasso+"Passo").style.display = "inline";
+					document.getElementById (contPasso+"Passo").style.display = "block";
 				}
 			}
 			
@@ -63,7 +63,7 @@
 			<input type="submit" value="Busca">
 		</form>
 		<!-- BEGIN: igredientes -->
-		<div id="-1Passo" style="background-color:green;display:inline">
+		<div id="-1Passo" style="background-color:green;display:block">
 			<h4>Igredientes</h4>
 			<h6>
 			<!-- BEGIN: igrediente -->
@@ -87,6 +87,11 @@
 				<input type="button" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();">
 			</div>
 		<!-- END: passoinstrucao -->
+		<!-- BEGIN: passofinal -->
+			<div id="{idPasso}Passo" style="background-color:green;display:none">
+				<h4>Sua receita está pronta!</h4>
+			</div>
+		<!-- END: passofinal -->
 	</body>
 </html>
 <!-- END: main -->
