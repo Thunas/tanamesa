@@ -54,6 +54,17 @@
 			
 			$arrayPassos = $passoReceitaDAO->getPassos($_GET["Receita"]);
 			
+			for ($i=0;$i<count($arrayPassos);++$i){
+				$template->assign ("idPasso",$arrayPassos[$i]->getIdPassoReceita());
+				$template->assign ("descricaoPasso",$arrayPassos[$i]->getDescricaoPasso());
+				if ($arrayPassos[$i]->getTipoPasso () == false){
+					$template->assign ("tempoPasso",$arrayPassos[$i]->getTempoPasso()->format("H:i:s"));
+					$template->parse ("main.passocont");
+				}else{
+					$template->parse("main.passointrucao");
+				}
+			}
+			
 		}
 	}
 	

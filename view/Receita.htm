@@ -1,7 +1,7 @@
 <!-- BEGIN: main -->
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<!-- BEGIN: controlador -->
 		<script>
 			var contPasso = -1;
@@ -73,21 +73,20 @@
 			<input type="button" value="Próximo passo" id="NextButton" onclick="proximoPasso ();">
 		</div>
 		<!-- END: ingredientes -->
-		<!-- BEGIN: passo -->
-			<!-- BEGIN: passoCont -->
-				<div id="{idPasso}Passo" style="background-color:green;display:none">
-					<h4>{descricaoPasso}</h4>
-					<input type="button" value="Começar"  onclick="contagem({idPasso});">
-					<h5 id="{idPasso}contadorPasso">{tempoPasso}</h5>
-					<input type="button" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();" disabled>
-				</div>
-			<!-- END: passoCont -->
-			<!-- BEGIN: passoInstrucao -->
-				<div id="{idPasso}Passo" style="background-color:green;display:none">
-					<h4>{descricaoPasso}</h4>
-				</div>
-			<!-- END: passoInstrucao -->
-		<!-- END: passo -->
+		<!-- BEGIN: passocont -->
+			<div id="{idPasso}Passo" style="background-color:green;display:none">
+				<h4>{descricaoPasso}</h4>
+			<input type="button" value="Começar"  onclick="contagem({idPasso});">
+				<h5 id="{idPasso}contadorPasso">{tempoPasso}</h5>
+				<input type="button" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();" disabled>
+			</div>
+		<!-- END: passocont -->
+		<!-- BEGIN: passoinstrucao -->
+			<div id="{idPasso}Passo" style="background-color:green;display:none">
+				<h4>{descricaoPasso}</h4>
+				<input type="button" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();">
+			</div>
+		<!-- END: passoinstrucao -->
 	</body>
 </html>
 <!-- END: main -->
