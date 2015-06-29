@@ -1,0 +1,28 @@
+<!-- BEGIN: main -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		<!-- BEGIN: logar -->
+			<form name="Login" action="../Servlet/ServletLogin.php" method="POST">
+				<input type="text" name="Login">
+				<input type="password" name="Senha">
+				<input type="submit" value="Entrar">
+			</form>
+		<!-- END: logar -->
+		<!-- BEGIN: erro -->
+			<h5>Nome de usuario ou senha está incorreto!</h5>
+		<!-- END: erro -->
+		<!-- BEGIN: usuario -->
+			<a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
+		<!-- END: usuario -->
+		<form name="Buscar" action="../Controller/Buscar.php" method="GET">
+			<input type="text" name="CampoBusca">
+			<input type="submit" value="Busca">
+		</form>
+		
+		<h1>Faça login para poder acessar essa receita!</h1>
+	</body>
+</html>
+<!-- END: main -->

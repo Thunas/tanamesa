@@ -1,0 +1,93 @@
+<!-- BEGIN: main -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!-- BEGIN: controlador -->
+		<script>
+			var contPasso = -1;
+			var maxPasso = {maxPasso}+1;
+			function proximoPasso (){
+				if (contPasso != maxPasso){
+					document.getElementById (contPasso+"Passo").style.display = "none";
+					contPasso++;
+					document.getElementById (contPasso+"Passo").style.display = "inline";
+				}
+			}
+			
+			function contagem (idPasso){
+				var valor = document.getElementById (idPasso+"contadorPasso").innerText;
+				var arrayTempoString = valor.split(":");
+				var time = [parseInt(arrayTempoString[0]), parseInt(arrayTempoString[1]), parseInt(arrayTempoString[2])];
+				if (time[2]!=0){
+					time[2]--;
+					document.getElementById((idPasso+"contadorPasso")).innerText = time[0]+":"+time[1]+":"+time[2];
+					setTimeout(contagem,1040,idPasso);
+				}else{
+					if (time[1]!=0){
+						time[1]--;
+						time[2] = 59;
+						document.getElementById((idPasso+"contadorPasso")).innerText = time[0]+":"+time[1]+":"+time[2];
+						setTimeout(contagem,1,idPasso);
+					}else{
+						if (time[0]!=0){
+							time[0]--;
+							time[1] = 59;
+							time[2] = 59;
+							document.getElementById((idPasso+"contadorPasso")).innerText = time[0]+":"+time[1]+":"+time[2];
+							setTimeout(contagem,1,idPasso);
+						}else{
+							document.getElementById (idPasso+"NextButton").disabled = false;
+						}
+					}
+				}
+			}
+		</script>
+		<!-- END: controlador -->
+	</head>
+	<body>
+		<!-- BEGIN: logar -->
+			<form name="Login" action="../Servlet/ServletLogin.php" method="POST">
+				<input type="text" name="Login">
+				<input type="password" name="Senha">
+				<input type="submit" value="Entrar">
+			</form>
+		<!-- END: logar -->
+		<!-- BEGIN: erro -->
+			<h5>Nome de usuario ou senha está incorreto!</h5>
+		<!-- END: erro -->
+		<!-- BEGIN: usuario -->
+			<a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
+		<!-- END: usuario -->
+		<form name="Buscar" action="../Controller/Buscar.php" method="GET">
+			<input type="text" name="CampoBusca">
+			<input type="submit" value="Busca">
+		</form>
+		<!-- BEGIN: igredientes -->
+		<div id="-1Passo" style="background-color:green;display:inline">
+			<h4>Igredientes</h4>
+			<h6>
+			<!-- BEGIN: igrediente -->
+				{nomeIgrediente}:{qtdIgrediente} {medidaIgrediente}<br>
+			<!-- END: igrediente -->
+			</h6>
+			<input type="button" value="Próximo passo" id="NextButton" onclick="proximoPasso ();">
+		</div>
+		<!-- END: ingredientes -->
+		<!-- BEGIN: passo -->
+			<!-- BEGIN: passoCont -->
+				<div id="{idPasso}Passo" style="background-color:green;display:none">
+					<h4>{descricaoPasso}</h4>
+					<input type="button" value="Começar"  onclick="contagem({idPasso});">
+					<h5 id="{idPasso}contadorPasso">{tempoPasso}</h5>
+					<input type="button" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();" disabled>
+				</div>
+			<!-- END: passoCont -->
+			<!-- BEGIN: passoInstrucao -->
+				<div id="{idPasso}Passo" style="background-color:green;display:none">
+					<h4>{descricaoPasso}</h4>
+				</div>
+			<!-- END: passoInstrucao -->
+		<!-- END: passo -->
+	</body>
+</html>
+<!-- END: main -->

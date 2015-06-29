@@ -44,8 +44,8 @@ class PassoReceita {
 	public function setSeqPasso($int) {
 		$this->seqPasso = $int;
 	}
-	public function setTipoPasso($string) {
-		$this->tipoPasso = $string;
+	public function setTipoPasso($bool) {
+		$this->tipoPasso = $bool;
 	}
 	public function setTempoPasso($datetime) {
 		$this->tempoPasso = $datetime;

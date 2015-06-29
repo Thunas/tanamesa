@@ -1,0 +1,33 @@
+<!-- BEGIN: main -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		<!-- BEGIN: logar -->
+			<form name="Login" action="../Servlet/ServletLogin.php" method="POST">
+				<input type="text" name="Login">
+				<input type="password" name="Senha">
+				<input type="submit" value="Entrar">
+			</form>
+		<!-- END: logar -->
+		<!-- BEGIN: erro -->
+			<h5>Nome de usuario ou senha está incorreto!</h5>
+		<!-- END: erro -->
+		<!-- BEGIN: usuario -->
+			<a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
+		<!-- END: usuario -->
+		<form name="Buscar" action="../Controller/Buscar.php" method="GET">
+			<input type="text" name="CampoBusca">
+			<input type="submit" value="Busca">
+		</form>
+		<!-- BEGIN: resultado -->
+			<div class="resultado" style="background-color:yellow">
+				<h2><a href="../Controller/Receita.php?Receita={idReceita}">{nomeReceita}</a></h2>
+				{descricaoReceita}<br>
+				{dificuldadeReceita}
+			</div>
+		<!-- END:resultado -->
+	</body>
+</html>
+<!-- END:main -->
