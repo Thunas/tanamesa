@@ -4,3 +4,23 @@ html, body{
 input{
     padding-bottom: 10px;
 }
+body{
+    background-image: url("../img/cad2.jpg");
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+    opacity: 1;;
+}
+.menu{
+    background-color: #ffffff;
+    height: 40px;
+}
+li {
+    padding-left: 240px;
+}
+.cadastro{
+    margin-top: 16%;
+    text-align: center;
+}
