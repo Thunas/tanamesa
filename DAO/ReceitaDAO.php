@@ -7,7 +7,7 @@ class ReceitaDAO{
 		$this->con = ConnectionFactory::getConnection();
 	}
 	
-	public function getReceitas ($nome, $inicio=0){
+	public function getReceitas ($nome="", $inicio=0){
 		if ($nome != ""){
 			$query = "select idReceita, nomeReceita, descricaoReceita, dificuldadeReceita from Receita where nomeReceita like '%".$nome."%' or descricaoReceita like '%".$nome."%' LIMIT ".$inicio.",20";
 		}else{
