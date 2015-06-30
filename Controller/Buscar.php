@@ -19,8 +19,11 @@
 	}
 	
 	$receitaDAO = new ReceitaDAO();
-	
-	$arrayReceitas = $receitaDAO->getReceitas($_GET["CampoBusca"]);
+	if (isset($_GET["CampoBusca"])){
+		$arrayReceitas = $receitaDAO->getReceitas($_GET["CampoBusca"]);
+	}else{
+		$arrayReceitas = $receitaDAO->getReceitas ();
+	}
 	for ($i=0;$i<count($arrayReceitas);++$i){
 		$template->assign("idReceita",$arrayReceitas[$i]->getIdReceita());
 		$template->assign("nomeReceita",$arrayReceitas[$i]->getNomeReceita());
