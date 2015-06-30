@@ -1,49 +1,40 @@
 <!-- BEGIN: main -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaNaMesa</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="index.css" rel="stylesheet">
-  </head>
-  <body>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-        
-<body class="body">
-    <div class="corpo">
-        <div class="corpo2">
-            <img src="img/Logo_Pronta.png" width="286" height="140" class="img-rounded" >
-            <div class="container-fluid">
-                <ul class="nav nav-pills menu">
-                    <li role="presentation" class="active"><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#">Receitas</a></li>
-                    <li role="presentation"><a href="#">(VAGO)</a></li>
-                </ul>
-
-                <!-- BEGIN: logar -->
-                <form name="Login" action="Servlet/ServletLogin.php" method="POST">
-                    <form class="form-inline"></form>
-                    <form name="Login" action="Servlet/ServletLogin.php" method="POST"></form>
-                    <input type="text" class="input-medium" placeholder="Login" name="Login">
-                    <input type="password" class="input-medium" placeholder="Senha">
-                    </label>
-                    <button type="submit" class="btn">Entrar</button>
-                </form>
-                <!-- BEGIN: busca -->
-                <form class="form-search">
-                    <input type="text" class="input-medium search-query" placeholder="Digite sua busca"
-                           action="Controller/Buscar.php" method="GET">
-                    <button type="submit" class="btn">Buscar</button>
-                </form>
-                <!-- END: busca --></div>
-            <div class="container-fluid">
-            </div>
+    <head>
+        <link href="index.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="menu">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Receitas</a></li>
+                <li role="presentation">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
         </div>
-    </div>
-</body>
+        <div class = "form-group login">
+            <label for = "email" class = "col-sm-4 control-label">Email</label>
+
+            <div class = "col-sm-4">
+                <input type = "email" class = "form-control" id = "email" name = "email" placeholder = "Email">
+            </div>
+            <label for = "senha" class = "col-sm-4 control-label">Password</label>
+
+            <div class = "col-sm-4">
+                <input type = "password" class = "form-control" id = "senha" name = "senha" placeholder = "Password">
+            </div>
+            <label> <input type = "checkbox"> Remember me </label>
+            <button type = "submit" class = "btn btn-default">Sign in</button>
+            <button type = "submit" class="btn btn-default" href="../view/cadastro.html"><a href="view/cadastro.html">Sign Up</a></button>
+        </div>
+    </body>
 </html>
 <!-- END: main -->

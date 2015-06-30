@@ -1,16 +1,19 @@
 <html>
 	<head>
 		<title>Cadastro - TaNaMesa</title>
+        <link href="cadastro.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body>
-		<form name="formularioCadastro" method="POST">
-		
-			<input type="text" placeholder="Nome" name="Nome"><br>
-			<input type="text" placeholder = "Sobre nome" name="SobreNome"><br>
-			<input type = "text" placeholder = "Login" name="Login"><br>
-			<input type = "password" placeholder = "Senha" name = "Email"><br>
-			<input type = "text" placeholder = "Email" name = "Email"><br>
-			<input type="submit" name="Enviar" value = "Cadastrar">
+		<form name="formularioCadastro" method="POST" action="../Servlet/ServletCadastro.php">
+		    <div>
+                <input type="text" placeholder="Nome" name="Nome"><br>
+                <input type="text" placeholder = "Sobre nome" name="SobreNome"><br>
+                <input type = "text" placeholder = "Login" name="Login"><br>
+                <input type = "password" placeholder = "Senha" name = "Email"><br>
+                <input type = "text" placeholder = "Email" name = "Email"><br>
+                <input type="submit" name="Enviar" value = "Cadastrar">
+            </div>
 		</form>
 	</body>
 </html>
