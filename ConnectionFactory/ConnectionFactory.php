@@ -2,11 +2,11 @@
 class ConnectionFactory{
 	private static $con = null;
 	
-	public function getConnection (){
+	public static function getConnection (){
 		$con = new mysqli("localhost","root","","tanamesa");
 		return $con;
 	}
-	public function closeConnection (){
+	public static function closeConnection ($con){
 		$con->close();
 	}
 }

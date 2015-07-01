@@ -1,9 +1,31 @@
 <!-- BEGIN: main -->
 <html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="../view/buscar.css" type="text/css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 	<body>
+        <div class="menu">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation" class="active"><a href="Controller/Buscar.php">Receitas</a></li>
+                <li role="presentation">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="CampoBusca" placeholder="Search">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <!-- BEGIN: usuario -->
+                    <a href="">{nomeUsuario}</a> | <a href="Servlet/ServletSair.php">Sair</a>
+                    <!-- END: usuario -->
+                </li>
+            </ul>
+        </div>
+
 		<!-- BEGIN: logar -->
 			<form name="Login" action="../Servlet/ServletLogin.php" method="POST">
 				<input type="text" name="Login">
@@ -17,17 +39,25 @@
 		<!-- BEGIN: usuario -->
 			<a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
 		<!-- END: usuario -->
-		<form name="Buscar" action="../Controller/Buscar.php" method="GET">
-			<input type="text" name="CampoBusca">
-			<input type="submit" value="Busca">
-		</form>
+
+            <img src="..." alt="..." class="img-circle">
+            <form name="Buscar" action="../Controller/Buscar.php" method="GET">
+                <input type="text" name="CampoBusca">
+                <input type="submit" value="Busca">
+            </form>
+
 		<!-- BEGIN: resultado -->
+        <div class="col-md-4">
 			<div class="resultado" style="background-color:yellow">
+                <img src="../img/cad2.jpg" alt="..." class="img-circle img">
 				<h2><a href="../Controller/Receita.php?Receita={idReceita}">{nomeReceita}</a></h2>
-				{descricaoReceita}<br>
+				{descricaoReceita}
 				{dificuldadeReceita}
 			</div>
+        </div>
 		<!-- END:resultado -->
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
 	</body>
 </html>
 <!-- END:main -->
