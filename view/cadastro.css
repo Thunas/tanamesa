@@ -19,9 +19,17 @@ body{
 
 }
 li{
-    padding-left: 240px;
+    padding-left: 100px;
+}
+.form-inline{
+	padding:20px;
 }
 .cadastro{
-    margin-top: 16%;
+   background-color: #ededed;
+    margin-left: 42%;
+    margin-top: 4%;
+    margin-right: 39%;
+    text-align: center;
+    border-radius: 4% ;
     text-align: center;
 }

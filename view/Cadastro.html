@@ -7,8 +7,9 @@
 	<body>
         <div class="menu">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="../index.php">Home</a></li>
+                <li role="presentation"><a href="../index.php">Home</a></li>
                 <li role="presentation"><a href="../Controller/Buscar.php">Receitas</a></li>
+                <li role="presentation"><a href="#">Cadastro</a></li>
                 <li role="presentation">
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -20,15 +21,28 @@
             </ul>
         </div>
 		<div class="cadastro">
-            <form name="formularioCadastro" method="POST" action="../Servlet/ServletCadastro.php">
-                <div class="login">
-                    <input type="text" placeholder="Nome" name="Nome" ><br>
-                    <input type="text" placeholder = "Sobre nome" name="SobreNome"><br>
-                    <input type = "text" placeholder = "Login" name="Login"><br>
-                    <input type = "password" placeholder = "Senha" name = "Email"><br>
-                    <input type = "text" placeholder = "Email" name = "Email"><br>
-                    <input type="submit" name="Enviar" value = "Cadastrar">
-                </div>
+            <form name="formularioCadastro" class="form-inline" method="POST" action="../Servlet/ServletCadastro.php">
+                    <label>Nome</label></label>
+                    <div class="">
+                    	<input type="text" class = "form-control" placeholder="Nome" name="Nome" >
+                    </div>
+                    <label>Sobre Nome:</label>
+                    <div class="">
+                    	<input type="text" class = "form-control" placeholder = "Sobre Nome" name="SobreNome">
+                    </div>
+                    <label>Login</label>
+                    <div class="">
+                    	<input type = "text" class = "form-control" placeholder = "Login" name="Login">
+					</div>
+                    <label>Senha</label>
+                    <div class="">
+                    	<input type = "password" class = "form-control" placeholder = "Senha" name = "Email">
+                    </div>
+                    <label>E-mail</label>
+                    <div class="">
+                    	<input type = "text" class = "form-control" placeholder = "Email" name = "Email">
+                    </div><br>
+                    <input type="submit" class="btn btn-default" name="Enviar" value = "Cadastrar">
 		    </form>
         </div>
 	</body>
