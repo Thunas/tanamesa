@@ -43,15 +43,21 @@
 				
             </ul>
         </div>
-		<!-- BEGIN: resultado -->
-        <div class="col-md-4">
-                <img src="../img/cad2.jpg" alt="..." class="img-circle img">
-				<h2><a href="../Controller/Receita.php?Receita={idReceita}">{nomeReceita}</a></h2>
-				{descricaoReceita}
-				{dificuldadeReceita}
-			
-        </div>
-		<!-- END:resultado -->
+        <div class="conteiner-fluid">
+	        <!-- BEGIN: linha -->
+		        <div class="row">
+					<!-- BEGIN: resultado -->
+				        <div class="col-md-4">
+				                <img src="../img/cad2.jpg" alt="..." class="img-circle img"><br>
+								<a href="../Controller/Receita.php?Receita={idReceita}">{nomeReceita}</a><br>
+								{descricaoReceita}<br>
+								{dificuldadeReceita}
+							
+				        </div>
+					<!-- END:resultado -->
+				</div>
+			<!-- END: linha -->
+		</div>
         <script src="../js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
 	</body>
