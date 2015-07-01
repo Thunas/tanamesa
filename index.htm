@@ -9,8 +9,8 @@
     <body>
         <div class="menu">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation" class="active"><a href="Controller/Buscar.php">Receitas</a></li>
+                <li role="presentation"><a href="#">Home</a></li>
+                <li role="presentation"><a href="Controller/Buscar.php">Receitas</a></li>
                 <li role="presentation">
                     <form class="navbar-form navbar" method="GET" action="Controller/Buscar.php" role="search">
                         <div class="form-group">
@@ -31,24 +31,24 @@
         </div>
         <div class = "form-group login">
         	<!-- BEGIN: logar -->
-	        	<form name="formularioLogin" action="Servlet/ServletLogin.php" method="POST">
-		            <label for = "email" class = "col-sm-4 control-label">Login</label>
+	        	<form name="" class="form-inline" action="Servlet/ServletLogin.php" method="POST">
+		            <label for = "email" class = "">Login</label>
 		
-		            <div class = "col-sm-4">
+		            <div class = "">
 		                <input type = "text" class = "form-control" id = "email" name = "Login" placeholder = "Login">
 		            </div>
-		            <label for = "senha" class = "col-sm-4 control-label">Password</label>
+		            <label for = "senha" class = "">Password</label>
 		
-		            <div class = "col-sm-4">
+		            <div class = "">
 		                <input type = "password" class = "form-control" id = "senha" name = "Senha" placeholder = "Password">
 		            </div>
 		            <!-- BEGIN: erro -->
             			Erro ao fazer login!
             		<!-- END: erro -->
-		            <label> <input type = "checkbox"> Remember me </label>
+		            <label> <input type = "checkbox"> Remember me </label><br>
 		            <input type = "submit" class = "btn btn-default" value="Sign in">
 	            </form>
-	            <button type = "submit" class="btn btn-default"><a href="view/cadastro.html">Sign Up</a></button>
+	            <a href="view/cadastro.html"><button type = "submit" class="btn btn-default">Sign Up</button></a>
             <!-- END: logar -->
         </div>
     </body>
