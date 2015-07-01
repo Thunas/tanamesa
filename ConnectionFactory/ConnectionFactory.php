@@ -6,7 +6,7 @@ class ConnectionFactory{
 		$con = new mysqli("localhost","root","","tanamesa");
 		return $con;
 	}
-	public static function closeConnection ($con){
+	public static function closeConnection (){
 		$con->close();
 	}
 }
