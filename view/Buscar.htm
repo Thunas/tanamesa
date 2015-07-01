@@ -8,52 +8,48 @@
 	<body>
         <div class="menu">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation" class="active"><a href="Controller/Buscar.php">Receitas</a></li>
+                <li role="presentation" class="active"><a href="../index.php">Home</a></li>
+                <li role="presentation" class="active"><a href="#">Receitas</a></li>
                 <li role="presentation">
-                    <form class="navbar-form navbar-left" role="search">
+                    <form class="navbar-form navbar"  role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="CampoBusca" placeholder="Search">
+                            <input type="text" class="form-control"  name="CampoBusca" placeholder="Search">
                             <button type="submit" class="btn btn-default">Submit</button>
                         </div>
                     </form>
                 </li>
-                <li>
                     <!-- BEGIN: usuario -->
-                    <a href="">{nomeUsuario}</a> | <a href="Servlet/ServletSair.php">Sair</a>
+                    <li role="presentation">
+                    	<a href="">{nomeUsuario}</a>
+                    </li>
+                    <li role="presentation" class="navbar-left">
+                    <a href="../Servlet/ServletSair.php">Sair</a>
+                    </li>
                     <!-- END: usuario -->
-                </li>
+                <!-- BEGIN: logar -->
+                	<li role="presentation">
+						<form name="Login" class="navbar-form navbar-left" action="../Servlet/ServletLogin.php" method="POST">
+							<div class="formgroup">
+								<input type="text" name="Login" class="form-control" placeholder="Login">
+								<input type="password" name="Senha" class="form-control" placeholder="Senha">
+								<input type="submit" class="btn btn-default" value="Entrar">
+								<!-- BEGIN: erro -->
+									<div class="error">Nome de usuario ou senha está incorreto!</div>
+								<!-- END: erro -->
+							</div>
+						</form>
+					</li>
+				<!-- END: logar -->
+				
             </ul>
         </div>
-
-		<!-- BEGIN: logar -->
-			<form name="Login" action="../Servlet/ServletLogin.php" method="POST">
-				<input type="text" name="Login">
-				<input type="password" name="Senha">
-				<input type="submit" value="Entrar">
-			</form>
-		<!-- END: logar -->
-		<!-- BEGIN: erro -->
-			<h5>Nome de usuario ou senha está incorreto!</h5>
-		<!-- END: erro -->
-		<!-- BEGIN: usuario -->
-			<a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
-		<!-- END: usuario -->
-
-            <img src="..." alt="..." class="img-circle">
-            <form name="Buscar" action="../Controller/Buscar.php" method="GET">
-                <input type="text" name="CampoBusca">
-                <input type="submit" value="Busca">
-            </form>
-
 		<!-- BEGIN: resultado -->
         <div class="col-md-4">
-			<div class="resultado" style="background-color:yellow">
                 <img src="../img/cad2.jpg" alt="..." class="img-circle img">
 				<h2><a href="../Controller/Receita.php?Receita={idReceita}">{nomeReceita}</a></h2>
 				{descricaoReceita}
 				{dificuldadeReceita}
-			</div>
+			
         </div>
 		<!-- END:resultado -->
         <script src="../js/bootstrap.min.js"></script>

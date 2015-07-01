@@ -15,11 +15,10 @@
 					$usuario->setIdUsuario($array["idUsuario"]);
 					$usuario->setNomeUsuario($array["nomeUsuario"]);
 					$_SESSION["usuario"] = $usuario;
-					print_r ($_SESSION["usuario"]);
 				}else{
 					$_SESSION["erro"] = true;
 				}
-				header("Location: ../");
+				echo ("<script>javascript:history.go(-1)</script>");
 			?>
 	</head>
 	<body>

@@ -7,7 +7,7 @@
 	session_start();
 	if (isset($_SESSION["erro"])){
 		unset($_SESSION["erro"]);
-		$template->parse("main.erro");
+		$template->parse("main.logar.erro");
 		$template->parse("main.logar");
 	}else{
 		if(isset($_SESSION["usuario"])){

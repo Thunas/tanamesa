@@ -12,22 +12,21 @@
                 <li role="presentation" class="active"><a href="#">Home</a></li>
                 <li role="presentation" class="active"><a href="Controller/Buscar.php">Receitas</a></li>
                 <li role="presentation">
-                    <form class="navbar-form navbar-left" role="search">
+                    <form class="navbar-form navbar" role="search">
                         <div class="form-group">
                             <input type="text" class="form-control" name="CampoBusca" placeholder="Search">
                             <button type="submit" class="btn btn-default">Submit</button>
                         </div>
                     </form>
                 </li>
-                
-                	<!-- BEGIN: usuario -->
-            			<li>
-            				<a href="">{nomeUsuario}</a>
-            			</li>
-            			<li>
-            				<a href="Servlet/ServletSair.php">Sair</a>
-            			</li>
-            		<!-- END: usuario -->
+                <!-- BEGIN: usuario -->
+                   <li role="presentation">
+                   	<a href="">{nomeUsuario}</a>
+                   </li>
+                   <li role="presentation" class="navbar-left">
+                   	<a href="Servlet/ServletSair.php">Sair</a>
+                   </li>
+               <!-- END: usuario -->
             </ul>
         </div>
         <div class = "form-group login">

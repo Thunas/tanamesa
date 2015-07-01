@@ -29,7 +29,7 @@ class ReceitaDAO{
 	
 	public function getAcessoReceita ($idReceita){
 		$query = "select publicaReceita from Receita where idReceita='".$idReceita."'";
-		$result = $this->con->query($query);
+		$result = $this->comn->query($query);
 		$linha = $result->fetch_assoc();
 		return $linha["publicaReceita"];
 	}
