@@ -30,10 +30,10 @@
 		$template->assign("descricaoReceita",$arrayReceitas[$i]->getDescricaoReceita());
 		$template->assign("dificuldadeReceita",$arrayReceitas[$i]->getDificuldadeReceita());
 		$template->parse("main.linha.resultado");
-		if ($i%3 == 0){
+		if ($i+1%3 == 0){
 			$template->parse("main.linha");
 		}
-		if ($i == count($arrayReceitas)-1 && $i%3 !=0){
+		if ($i == count($arrayReceitas)-1 && $i+1%3 !=0){
 			$template->parse("main.linha");
 		}
 	}

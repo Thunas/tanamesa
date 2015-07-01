@@ -1,0 +1,10 @@
+.menu {
+    background-color: #ffffff;
+}
+
+li{
+    padding-left: 90px;
+}
+html,body{
+    height: 100%;
+}
