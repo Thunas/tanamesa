@@ -51,14 +51,16 @@
                         <div class="row">
                             <!-- BEGIN: resultado -->
                                 <div class="col-md-4">
-                                    <div class="img2">
-                                        <a href="../Controller/Receita.php?Receita={idReceita}">
-                                            <img src="../img/arroz.jpg" alt="..." class="img-circle img"><br>
-                                        </a>
-                                    </div>
+                                	<div class="ColPad">
+	                                    <div class="img2">
+	                                        <a href="../Controller/Receita.php?Receita={idReceita}">
+	                                            <img src="../img/arroz.jpg" alt="..." class="img-circle img"><br>
+	                                        </a>
+	                                    </div>
                                         <a href="../Controller/Receita.php?Receita={idReceita}">{nomeReceita}</a><br>
-                                        {descricaoReceita}
-                                        {dificuldadeReceita}
+                                        Descrição: {descricaoReceita}<br>
+                                        Dificuldade: {dificuldadeReceita}
+                                   </div>
                                 </div>
                             <!-- END:resultado -->
                         </div>

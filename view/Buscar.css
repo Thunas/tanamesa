@@ -7,6 +7,16 @@
 li{
     padding-left: 80px;
 }
+.ColPad{
+	background-color:yellow;
+	margin-bottom:25px;
+	border-radius:80px;
+	width:90%;
+	margin-right:0.1%;
+}
+.col-md-4{
+	height:220px;
+}
 .error{
 	position:relative;
 	top:-5px;
@@ -28,7 +38,7 @@ html, body{
 	height:100%;
 }
 .caixa{
-    padding: 100px;
+    padding: 50px;
     text-align: center;
 }
 .img2{
