@@ -58,25 +58,12 @@
                     <a href="../Servlet/ServletSair.php">Sair</a>
                 </li>
                 <!-- END: usuario -->
-                <!-- BEGIN: logar -->
-                <li role="presentation">
-                    <form name="Login" class="navbar-form navbar" action="../Servlet/ServletLogin.php" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="Login" class="form-control" placeholder="Login">
-                            <input type="password" name="Senha" class="form-control" placeholder="Senha">
-                            <input type="submit" class="btn btn-default" value="Entrar">
-                            <!-- BEGIN: erro -->
-                            <div class="error">Nome de usuario ou senha está incorreto!</div>
-                            <!-- END: erro -->
-                        </div>
-                    </form>
-                </li>
                 <li role="presentation">
                     <!-- BEGIN: erro -->
-                        <h5>Nome de usuario ou senha está incorreto!</h5>
+                    <h5>Nome de usuario ou senha está incorreto!</h5>
                     <!-- END: erro -->
                     <!-- BEGIN: usuario -->
-                        <a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
+                    <a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
                     <!-- END: usuario -->
                 </li>
                 <li role="presentation">
@@ -85,6 +72,20 @@
                         <input type="submit" class="btn btn-default" value="Busca">
                     </form>
                 </li>
+                <!-- BEGIN: logar -->
+                <li role="presentation">
+                    <form name="Login" class="navbar-form navbar" action="../Servlet/ServletLogin.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="Login" class="form-control" placeholder="Login" size="10">
+                            <input type="password" name="Senha" class="form-control" placeholder="Senha" size="10">
+                            <input type="submit" class="btn btn-default" value="Entrar">
+                            <!-- BEGIN: erro -->
+                            <div class="error">Nome de usuario ou senha está incorreto!</div>
+                            <!-- END: erro -->
+                        </div>
+                    </form>
+                </li>
+                <!-- END: logar -->
             </ul>
 
 		<!-- BEGIN: igredientes -->
