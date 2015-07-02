@@ -8,14 +8,14 @@ li{
     padding-left: 80px;
 }
 .ColPad{
-	background-color:yellow;
+	background-color: #ffffff;
 	margin-bottom:25px;
+	padding-bottom:20px;
 	border-radius:80px;
 	width:90%;
 	margin-right:0.1%;
 }
 .col-md-4{
-	height:220px;
 }
 .error{
 	position:relative;
@@ -40,13 +40,16 @@ html, body{
 .caixa{
     padding: 50px;
     text-align: center;
+    overflow:scroll;
+    width:100%;
+    height:90%;
 }
 .img2{
     padding-bottom: 10px;
     padding-top: 30px;
 }
 .tudo{
-    background-color: #0099FF;
+    background-color: #5CACEE;
     height: 100%;
 
 }

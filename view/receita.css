@@ -9,10 +9,18 @@ li{
 html,body{
     height: 100%;
 }
+.ColPad{
+	background-color: #ADFF2F;
+	margin-bottom:25px;
+	padding:40px;
+	border-radius:80px;
+	width:90%;
+	margin-right:0.1%;
+}
 .receita{
+	margin-left:35%;
     text-align: center;
     margin-top: 15%;
-    background-color: #11D6EE;
     border-radius: 10%;
 }
 body{

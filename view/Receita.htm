@@ -50,7 +50,7 @@
         <div class="menu">
             <ul class="nav nav-pills menu">
                 <li role="presentation" ><a href="../index.php">Home</a></li>
-                <li role="presentation" ><a href="#">Receitas</a></li>
+                <li role="presentation" ><a href="../Controller/Buscar.php">Receitas</a></li>
                 <!-- BEGIN: usuario -->
                 <li role="presentation">
                     <a href="">{nomeUsuario}</a>
@@ -89,38 +89,39 @@
                 <!-- END: logar -->
             </ul>
         </div>
-        <div class="col-md-4"></div>
-		<!-- BEGIN: igredientes -->
         <div class="col-md-4  receita">
-            <div id="-1Passo" style="display:block">
-                <h4>Igredientes</h4>
-                <h6>
-                <!-- BEGIN: igrediente -->
-                    {nomeIgrediente}:{qtdIgrediente} {medidaIgrediente}<br>
-                <!-- END: igrediente -->
-                </h6>
-                <input type="button" value="Próximo passo" class="btn btn-lg btn-primary"id="NextButton" onclick="proximoPasso ();">
-            </div>
-            <!-- END: ingredientes -->
-            <!-- BEGIN: passocont -->
-                <div id="{idPasso}Passo" style="display:none">
-                    <h4>{descricaoPasso}</h4>
-                <input type="button" value="Começar"  onclick="contagem({idPasso});">
-                    <h5 id="{idPasso}contadorPasso">{tempoPasso}</h5>
-                    <input type="button" class="btn btn-lg btn-primary" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();" disabled>
-                </div>
-            <!-- END: passocont -->
-            <!-- BEGIN: passoinstrucao -->
-                <div id="{idPasso}Passo" style="display:none">
-                    <h4>{descricaoPasso}</h4>
-                    <input type="button" class="btn btn-lg btn-primary" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();">
-                </div>
-            <!-- END: passoinstrucao -->
-            <!-- BEGIN: passofinal -->
-                <div id="{idPasso}Passo" style="display:none">
-                    <h4>Sua receita está pronta!</h4>
-                </div>
-            <!-- END: passofinal -->
+        	<div class="ColPad">
+				<!-- BEGIN: igredientes -->
+		            <div id="-1Passo" style="display:block">
+		                <h2>Igredientes</h2>
+		                <h4>
+		                <!-- BEGIN: igrediente -->
+		                    {nomeIgrediente}:{qtdIgrediente} {medidaIgrediente}<br>
+		                <!-- END: igrediente -->
+		                </h4>
+		                <input type="button" value="Próximo passo" class="btn btn-lg btn-primary"id="NextButton" onclick="proximoPasso ();">
+		            </div>
+		        <!-- END: ingredientes -->
+		        <!-- BEGIN: passocont -->
+		             <div id="{idPasso}Passo" style="display:none">
+		                <h2>{descricaoPasso}</h2>
+		             	<input type="button" class="btn btn-default" value="Começar"  onclick="contagem({idPasso});">
+		                <h4 id="{idPasso}contadorPasso">{tempoPasso}</h4>
+		                <input type="button" class="btn btn-lg btn-primary" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();" disabled>
+		             </div>
+		        <!-- END: passocont -->
+		        <!-- BEGIN: passoinstrucao -->
+		            <div id="{idPasso}Passo" style="display:none">
+		                <h4>{descricaoPasso}</h4>
+		                <input type="button" class="btn btn-lg btn-primary" value="Próximo passo" id="{idPasso}NextButton" onclick="proximoPasso ();">
+		            </div>
+		        <!-- END: passoinstrucao -->
+		        <!-- BEGIN: passofinal -->
+		            <div id="{idPasso}Passo" style="display:none">
+		                <h2>Sua receita está pronta!</h2>
+		            </div>
+		        <!-- END: passofinal -->
+		     </div>
         </div>
         </body>
 </html>
