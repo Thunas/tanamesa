@@ -8,7 +8,7 @@ body{
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     overflow: hidden;
-    opacity: 1;;
+    opacity: 1;
 }
 .menu{
     background-color: #ffffff;
@@ -16,7 +16,7 @@ body{
 
 }
 li{
-    padding-left: 100px;
+    padding-left: 90px;
 }
 .form-inline{
 	padding:20px;

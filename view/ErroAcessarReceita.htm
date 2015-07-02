@@ -1,28 +1,52 @@
 <!-- BEGIN: main -->
 <html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="../view/Erros.css" type="text/css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
 	</head>
 	<body>
-		<!-- BEGIN: logar -->
-			<form name="Login" action="../Servlet/ServletLogin.php" method="POST">
-				<input type="text" name="Login">
-				<input type="password" name="Senha">
-				<input type="submit" value="Entrar">
-			</form>
-		<!-- END: logar -->
-		<!-- BEGIN: erro -->
-			<h5>Nome de usuario ou senha está incorreto!</h5>
-		<!-- END: erro -->
-		<!-- BEGIN: usuario -->
-			<a href="">{nomeUsuario}</a> | <a href="../Servlet/ServletSair.php">Sair</a>
-		<!-- END: usuario -->
-		<form name="Buscar" action="../Controller/Buscar.php" method="GET">
-			<input type="text" name="CampoBusca">
-			<input type="submit" value="Busca">
-		</form>
-		
-		<h1>Erro ao acessar essa receita!</h1>
+		<div class="tudo">
+            <div class="menu">
+                <ul class="nav nav-pills">
+                    <li role="presentation" ><a href="../index.php">Home</a></li>
+                    <li role="presentation" ><a href="#">Receitas</a></li>
+                    <li role="presentation"><a href="../View/Cadastro.html">Cadastro</a></li>
+                    <li role="presentation">
+                        <form class="navbar-form navbar"  role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control"  name="CampoBusca" placeholder="Search">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </form>
+                    </li>
+                        <!-- BEGIN: usuario -->
+                        <li role="presentation">
+                            <a href="">{nomeUsuario}</a>
+                        </li>
+                        <li role="presentation" class="navbar-left">
+                        <a href="../Servlet/ServletSair.php">Sair</a>
+                        </li>
+                        <!-- END: usuario -->
+                        <!-- BEGIN: logar -->
+                        <li role="presentation">
+                            <form name="Login" class="navbar-form navbar-left" action="../Servlet/ServletLogin.php" method="POST">
+                                <div class="formgroup grupo">
+                                    <input type="text" name="Login" class="form-control" placeholder="Login" size="10">
+                                    <input type="password" name="Senha" class="form-control" placeholder="Senha" size="10">
+                                    <input type="submit" class="btn btn-default" value="Entrar">
+                                    <!-- BEGIN: erro -->
+                                        <div class="error">Nome de usuario ou senha está incorreto!</div><br>
+                                    <!-- END: erro -->
+                                </div>
+                            </form>
+                        </li>
+                    <!-- END: logar -->
+
+                </ul>
+            </div>
+            <h1>Erro ao acessar essa receita!</h1>
+        </div>
 	</body>
 </html>
-<!-- END: main -->
