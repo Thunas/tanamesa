@@ -1,5 +1,6 @@
 .menu {
     background-color: #ffffff;
+    height: 50px;
 }
 
 li{
@@ -7,4 +8,18 @@ li{
 }
 html,body{
     height: 100%;
+}
+.receita{
+    text-align: center;
+    margin-top: 15%;
+    background-color: #11D6EE;
+    border-radius: 10%;
+}
+body{
+    background-image: url("../img/busca.jpg");
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+    opacity: 1;;
 }
